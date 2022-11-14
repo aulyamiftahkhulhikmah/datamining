@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas 5 &#8212; Aulya Miftahkhul Hikmah</title>
+    <title>Tugas 6 &#8212; Aulya Miftahkhul Hikmah</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tugas 6" href="Tugas-6.html" />
-    <link rel="prev" title="TUGAS 4 K-MEANS CLUSTERING" href="Tugas-4.html" />
+    <link rel="next" title="TUGAS 7" href="Tugas-7.html" />
+    <link rel="prev" title="Tugas 5" href="Tugas-5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -163,13 +163,13 @@ const thebe_selector_output = ".output, .cell_output"
    TUGAS 4 K-MEANS CLUSTERING
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-5.html">
    Tugas 5
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Tugas-6.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Tugas 6
   </a>
  </li>
@@ -242,7 +242,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://colab.research.google.com/github/aulyamiftahkhulhikmah/datamining/blob/gh-pages/_sources/tugas_pendat/Tugas-5.ipynb"
+        <a href="https://colab.research.google.com/github/aulyamiftahkhulhikmah/datamining/blob/gh-pages/_sources/tugas_pendat/Tugas-6.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -302,7 +302,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/aulyamiftahkhulhikmah/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas_pendat/Tugas-5.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/aulyamiftahkhulhikmah/datamining/issues/new?title=Issue%20on%20page%20%2Ftugas_pendat/Tugas-6.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -330,7 +330,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/tugas_pendat/Tugas-5.ipynb"
+        <a href="../_sources/tugas_pendat/Tugas-6.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -395,15 +395,22 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normalisasi-min-max">
-     Normalisasi Min-Max
+    <a class="reference internal nav-link" href="#normalisasi-min-and-max">
+     Normalisasi Min and Max
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gaussian-naive-bayes">
+       GAUSSIAN NAIVE BAYES
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gaussian-naive-bayes">
-   Gaussian Naive Bayes
+  <a class="reference internal nav-link" href="#bagging-classifier">
+   BAGGING CLASSIFIER
   </a>
  </li>
 </ul>
@@ -415,7 +422,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tugas 5</h1>
+                <h1>Tugas 6</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -431,15 +438,22 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normalisasi-min-max">
-     Normalisasi Min-Max
+    <a class="reference internal nav-link" href="#normalisasi-min-and-max">
+     Normalisasi Min and Max
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gaussian-naive-bayes">
+       GAUSSIAN NAIVE BAYES
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gaussian-naive-bayes">
-   Gaussian Naive Bayes
+  <a class="reference internal nav-link" href="#bagging-classifier">
+   BAGGING CLASSIFIER
   </a>
  </li>
 </ul>
@@ -452,16 +466,27 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-5">
-<h1>Tugas 5<a class="headerlink" href="#tugas-5" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-6">
+<h1>Tugas 6<a class="headerlink" href="#tugas-6" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">sklearn</span> <span class="k">as</span> <span class="nn">sk</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">time</span> 
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="kn">import</span> <span class="nn">time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/datamining/tugas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/datamining/tugas
 </pre></div>
 </div>
 </div>
@@ -469,9 +494,8 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">arff</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">arff</span><span class="o">.</span><span class="n">loadarff</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/datamining/tugas/messidor_features.arff&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">arff</span><span class="o">.</span><span class="n">loadarff</span><span class="p">(</span><span class="s1">&#39;messidor_features.arff&#39;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="n">df</span>
@@ -480,7 +504,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5afafbfe-21c0-4ab3-9319-67d5fdb2fc7b">
+  <div id="df-b7bc0f63-666b-4b2d-bb9e-e1ef73992bf1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -780,7 +804,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5afafbfe-21c0-4ab3-9319-67d5fdb2fc7b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b7bc0f63-666b-4b2d-bb9e-e1ef73992bf1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -831,12 +855,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5afafbfe-21c0-4ab3-9319-67d5fdb2fc7b button.colab-df-convert');
+          document.querySelector('#df-b7bc0f63-666b-4b2d-bb9e-e1ef73992bf1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5afafbfe-21c0-4ab3-9319-67d5fdb2fc7b');
+          const element = document.querySelector('#df-b7bc0f63-666b-4b2d-bb9e-e1ef73992bf1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -866,7 +890,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
 
@@ -934,7 +958,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-764c7d9b-2810-43c2-8d7a-17b8765377bb">
+  <div id="df-2d7e33c4-ee5a-4faa-85c9-6a1c91daa440">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1234,7 +1258,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-764c7d9b-2810-43c2-8d7a-17b8765377bb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2d7e33c4-ee5a-4faa-85c9-6a1c91daa440')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1285,12 +1309,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-764c7d9b-2810-43c2-8d7a-17b8765377bb button.colab-df-convert');
+          document.querySelector('#df-2d7e33c4-ee5a-4faa-85c9-6a1c91daa440 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-764c7d9b-2810-43c2-8d7a-17b8765377bb');
+          const element = document.querySelector('#df-2d7e33c4-ee5a-4faa-85c9-6a1c91daa440');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1324,7 +1348,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-34caf30d-f77d-4129-aa3c-f592f00dbe20">
+  <div id="df-1754c7d2-a445-43f4-8883-780fe6f3884a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1612,7 +1636,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-34caf30d-f77d-4129-aa3c-f592f00dbe20')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1754c7d2-a445-43f4-8883-780fe6f3884a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1663,12 +1687,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-34caf30d-f77d-4129-aa3c-f592f00dbe20 button.colab-df-convert');
+          document.querySelector('#df-1754c7d2-a445-43f4-8883-780fe6f3884a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-34caf30d-f77d-4129-aa3c-f592f00dbe20');
+          const element = document.querySelector('#df-1754c7d2-a445-43f4-8883-780fe6f3884a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1691,10 +1715,10 @@ title="Print to PDF"
 </div>
 <section id="normalisasi">
 <h2>Normalisasi<a class="headerlink" href="#normalisasi" title="Permalink to this headline">#</a></h2>
-<section id="normalisasi-min-max">
-<h3>Normalisasi Min-Max<a class="headerlink" href="#normalisasi-min-max" title="Permalink to this headline">#</a></h3>
+<section id="normalisasi-min-and-max">
+<h3>Normalisasi Min and Max<a class="headerlink" href="#normalisasi-min-and-max" title="Permalink to this headline">#</a></h3>
 <div class="math notranslate nohighlight">
-\[ x'= \frac{x-x_{min}}{x_{max}-x_{min}}\]</div>
+\[ X'= \frac{x-x_{min}}{x_{max}-x_{min}}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
@@ -1755,7 +1779,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cdd28a24-0340-4e51-8c34-9ee99f728ecc">
+  <div id="df-72f02604-6565-4b29-8657-1083a7da52f8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2043,7 +2067,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cdd28a24-0340-4e51-8c34-9ee99f728ecc')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-72f02604-6565-4b29-8657-1083a7da52f8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2094,12 +2118,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cdd28a24-0340-4e51-8c34-9ee99f728ecc button.colab-df-convert');
+          document.querySelector('#df-72f02604-6565-4b29-8657-1083a7da52f8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cdd28a24-0340-4e51-8c34-9ee99f728ecc');
+          const element = document.querySelector('#df-72f02604-6565-4b29-8657-1083a7da52f8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2157,7 +2181,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ybaru</span><span class="o">=</span><span class="n">le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yBaru</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2170,7 +2194,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ybaru</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yBaru</span>
 </pre></div>
 </div>
 </div>
@@ -2180,10 +2204,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-</section>
 <section id="gaussian-naive-bayes">
-<h2>Gaussian Naive Bayes<a class="headerlink" href="#gaussian-naive-bayes" title="Permalink to this headline">#</a></h2>
+<h4>GAUSSIAN NAIVE BAYES<a class="headerlink" href="#gaussian-naive-bayes" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># library for Naive Bayes Gaussian</span>
@@ -2207,9 +2229,10 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
 
-<span class="n">training</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">train_size</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">training_label</span><span class="p">,</span> <span class="n">test_label</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">ybaru</span><span class="p">,</span> <span class="n">train_size</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">training</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">scaled</span><span class="p">,</span> <span class="n">train_size</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">training_label</span><span class="p">,</span> <span class="n">test_label</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">yBaru</span><span class="p">,</span> <span class="n">train_size</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">clf2</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
 <span class="n">clf2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">training</span><span class="p">,</span> <span class="n">training_label</span><span class="p">)</span>
@@ -2221,13 +2244,19 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(231,)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(231,)
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(920, 19)
 </pre></div>
 </div>
 </div>
@@ -2239,64 +2268,53 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.44675761e-02, 1.01773885e-03, 1.00000000e+00, 9.47815666e-04,
-       1.34612803e-03, 1.00000000e+00, 5.22355851e-02, 7.94813794e-04,
-       5.35188240e-04, 6.11399680e-04, 9.99999432e-01, 6.38903416e-04,
-       5.64178101e-01, 7.40947996e-04, 9.99951663e-01, 4.50590733e-02,
-       8.34303868e-02, 6.90239788e-04, 1.44660822e-02, 2.17747148e-03,
-       8.32397496e-04, 2.55027023e-01, 1.33668119e-01, 1.70935484e-02,
-       2.02105520e-01, 8.81208832e-01, 7.45754095e-01, 1.58269133e-03,
-       4.74006385e-02, 9.99098165e-01, 9.29907570e-03, 7.90665894e-04,
-       3.20652663e-01, 3.32866709e-03, 2.76083452e-03, 1.00000000e+00,
-       5.96968366e-03, 5.94110417e-02, 7.56560778e-03, 1.69729481e-02,
-       8.27793664e-04, 9.03347700e-02, 1.16745907e-03, 9.95375504e-01,
-       1.63561902e-02, 1.47791344e-01, 7.24905010e-04, 8.67967501e-02,
-       1.32947541e-03, 3.35089635e-03, 9.50193633e-01, 8.78572937e-04,
-       7.01652166e-04, 1.37358778e-02, 3.14435173e-03, 9.99999999e-01,
-       1.34427434e-03, 1.00000000e+00, 1.00000000e+00, 9.72920955e-01,
-       1.30918012e-01, 3.85025743e-03, 1.59931116e-02, 3.42788773e-01,
-       9.15196947e-01, 8.06778812e-02, 8.85919633e-04, 9.48915433e-01,
-       1.22725175e-03, 1.01586080e-01, 1.00000000e+00, 9.97014480e-04,
-       4.10523312e-03, 1.68334678e-02, 6.61775129e-04, 1.43184342e-03,
-       5.73620325e-04, 6.13857457e-04, 5.73105244e-04, 5.65418440e-02,
-       1.00000000e+00, 8.97929611e-01, 1.51712402e-02, 4.52022695e-02,
-       9.97489656e-01, 4.73673741e-02, 1.00000000e+00, 2.31495254e-03,
-       1.00000000e+00, 8.64325067e-03, 1.00000000e+00, 1.54346853e-03,
-       1.03998310e-02, 1.00000000e+00, 1.59856728e-01, 5.68862498e-01,
-       5.78870215e-04, 9.92355622e-01, 1.52617570e-01, 1.60731299e-02,
-       5.13056173e-02, 5.82336764e-04, 6.31896182e-04, 7.15995799e-03,
-       4.35584870e-02, 9.99999999e-01, 4.98332077e-04, 9.78264469e-01,
-       7.05055454e-04, 8.81391356e-01, 9.98913097e-01, 1.82598399e-03,
-       3.86635697e-02, 1.54749301e-03, 3.13351187e-02, 6.04598181e-03,
-       3.84555614e-01, 1.00000000e+00, 2.05544383e-01, 7.46174201e-04,
-       1.20223520e-03, 1.12516941e-01, 1.66317431e-02, 1.91938764e-03,
-       6.75484142e-04, 2.93869551e-03, 1.75468756e-03, 1.56243702e-03,
-       1.00000000e+00, 4.80938887e-02, 6.46394318e-03, 9.98517406e-01,
-       5.09533942e-01, 1.00000000e+00, 9.82421991e-01, 1.00000000e+00,
-       9.99998419e-01, 1.07598699e-03, 6.62285702e-04, 5.71101358e-02,
-       2.40186886e-03, 9.83334604e-03, 1.00000000e+00, 5.23496849e-03,
-       1.10951131e-03, 8.57545944e-03, 1.00000000e+00, 1.00000000e+00,
-       3.40220861e-03, 1.46764182e-03, 7.64649819e-04, 3.34099911e-03,
-       5.79728248e-03, 4.89839530e-04, 7.47998334e-04, 1.00000000e+00,
-       2.66942924e-02, 9.99999832e-01, 2.12168956e-01, 9.63262309e-03,
-       1.00000000e+00, 1.06619487e-03, 7.12604227e-04, 6.84127339e-04,
-       9.40579172e-01, 1.82079480e-03, 9.96262033e-01, 1.11494340e-02,
-       7.07306176e-04, 6.29958669e-03, 1.56448325e-02, 6.87227330e-04,
-       3.28325232e-01, 1.01569603e-02, 1.86529948e-01, 9.88952443e-03,
-       2.98841332e-01, 3.67585329e-01, 9.70379034e-01, 4.71158116e-03,
-       2.18164680e-02, 4.96201304e-04, 1.09137635e-03, 7.62767464e-03,
-       1.46743413e-03, 1.03924942e-02, 9.03396799e-02, 6.83172305e-04,
-       6.12074732e-02, 4.42492741e-03, 9.60173292e-02, 2.04200456e-02,
-       1.00000000e+00, 8.41506342e-01, 1.00000000e+00, 1.00000000e+00,
-       1.28134600e-01, 1.58320241e-03, 5.71202886e-04, 1.61299147e-01,
-       3.07943522e-03, 8.32857193e-01, 7.87722475e-03, 4.52806026e-04,
-       1.34049551e-03, 6.33896620e-04, 7.73407297e-04, 4.28987476e-01,
-       1.13283472e-03, 2.84555651e-02, 2.33574217e-03, 1.54021134e-02,
-       9.92867699e-01, 6.78937673e-02, 1.00000000e+00, 7.24986327e-03,
-       9.72849314e-01, 2.27608368e-03, 6.91472414e-04, 6.49263216e-04,
-       1.80605877e-03, 9.99906011e-01, 2.97679734e-02, 1.26767112e-02,
-       4.70776922e-03, 9.17498607e-01, 4.08160984e-03, 2.89283876e-02,
-       6.21468999e-01, 1.00000000e+00, 6.87419130e-04])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.75620474, 0.11189161, 1.        , 0.10486252, 0.14252695,
+       1.        , 0.87186459, 0.08938164, 0.06195771, 0.07016774,
+       1.        , 0.07309769, 0.99377827, 0.08398282, 0.99999961,
+       0.85347824, 0.91850879, 0.07858852, 0.64476537, 0.21435453,
+       0.09334844, 0.9769378 , 0.95011339, 0.68211181, 0.96900188,
+       0.99890913, 0.99724613, 0.16434853, 0.86018358, 0.99999363,
+       0.53634466, 0.08895374, 0.98313892, 0.29158109, 0.25465845,
+       1.        , 0.42762289, 0.88627287, 0.48478246, 0.68057536,
+       0.09285228, 0.92485924, 0.12602622, 0.99996256, 0.67208144,
+       0.95535994, 0.08212779, 0.92138625, 0.14110054, 0.29346465,
+       0.99957587, 0.09783595, 0.07974339, 0.63233074, 0.2814182 ,
+       1.        , 0.14248748, 1.        , 1.        , 0.99977481,
+       0.94905966, 0.32335402, 0.66732001, 0.98470723, 0.99924866,
+       0.91560627, 0.09860317, 0.99956381, 0.13165869, 0.93304628,
+       1.        , 0.1097288 , 0.336975  , 0.67880805, 0.07551187,
+       0.15046226, 0.06612315, 0.07050754, 0.06605462, 0.88089312,
+       1.        , 0.99908009, 0.65508392, 0.85384983, 0.99997971,
+       0.85982459, 1.        , 0.22228045, 1.        , 0.51881583,
+       1.        , 0.1601833 , 0.56489793, 1.        , 0.95912747,
+       0.99390307, 0.06669617, 0.99994093, 0.95697036, 0.66801819,
+       0.86976186, 0.06706977, 0.07242654, 0.47046825, 0.84920321,
+       1.        , 0.05787343, 0.99982102, 0.08012137, 0.99891305,
+       0.99999133, 0.18732054, 0.83260846, 0.16077613, 0.799558  ,
+       0.42904874, 0.98720071, 1.        , 0.96964046, 0.08441927,
+       0.12885481, 0.94033065, 0.67612727, 0.19183544, 0.07696444,
+       0.26696759, 0.17817935, 0.16196547, 1.        , 0.86166374,
+       0.44565553, 0.99998881, 0.99228367, 1.        , 0.99985484,
+       1.        , 0.99999999, 0.11737421, 0.07561375, 0.8821287 ,
+       0.22906703, 0.55149864, 1.        , 0.39346773, 0.12066409,
+       0.51639957, 1.        , 1.        , 0.29719598, 0.15344951,
+       0.0863146 , 0.29259063, 0.41884135, 0.05694947, 0.08461161,
+       1.        , 0.7729152 , 1.        , 0.97079294, 0.54664137,
+       1.        , 0.11629832, 0.08089507, 0.07805169, 0.99948837,
+       0.18394124, 0.99996964, 0.58947713, 0.08030054, 0.43904287,
+       0.66311756, 0.07841724, 0.98371956, 0.55877777, 0.96593647,
+       0.55264935, 0.9813472 , 0.9862656 , 0.99975574, 0.36828985,
+       0.7337582 , 0.05763816, 0.11919843, 0.48677852, 0.15423286,
+       0.56479739, 0.9246502 , 0.07800551, 0.88966201, 0.35381276,
+       0.92915329, 0.72146675, 1.        , 0.99847688, 1.        ,
+       1.        , 0.94776044, 0.16369382, 0.06581339, 0.95954445,
+       0.2764462 , 0.9983774 , 0.49497013, 0.05286252, 0.14214012,
+       0.07261336, 0.08716287, 0.9895085 , 0.12310251, 0.78514343,
+       0.22433016, 0.65895065, 0.99994182, 0.89992995, 1.        ,
+       0.47476407, 0.99978951, 0.21982009, 0.07868117, 0.0742566 ,
+       0.18242771, 0.99999934, 0.79139724, 0.61353135, 0.36884766,
+       0.99927186, 0.33597509, 0.78636633, 0.99509548, 1.        ,
+       0.07830934])
 </pre></div>
 </div>
 </div>
@@ -2332,20 +2350,34 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 0., 1., 0., 0., 1., 0., 0., 0., 0., 1., 0., 1., 0., 1., 0., 0.,
-       0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0., 0., 1., 0., 0., 0., 0.,
-       0., 1., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 1.,
-       0., 0., 0., 0., 1., 0., 1., 1., 1., 0., 0., 0., 0., 1., 0., 0., 1.,
-       0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 1., 0., 0., 1.,
-       0., 1., 0., 1., 0., 1., 0., 0., 1., 0., 1., 0., 1., 0., 0., 0., 0.,
-       0., 0., 0., 1., 0., 1., 0., 1., 1., 0., 0., 0., 0., 0., 0., 1., 0.,
-       0., 0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 1., 1., 1., 1., 1.,
-       1., 0., 0., 0., 0., 0., 1., 0., 0., 0., 1., 1., 0., 0., 0., 0., 0.,
-       0., 0., 1., 0., 1., 0., 0., 1., 0., 0., 0., 1., 0., 1., 0., 0., 0.,
-       0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0.,
-       0., 0., 0., 0., 0., 1., 1., 1., 1., 0., 0., 0., 0., 0., 1., 0., 0.,
-       0., 0., 0., 0., 0., 0., 0., 0., 1., 0., 1., 0., 1., 0., 0., 0., 0.,
-       1., 0., 0., 0., 1., 0., 0., 1., 1., 0.])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 0., 1., 0., 0., 1., 1., 0., 0., 0., 1., 0., 1., 0., 1., 1., 1.,
+       0., 1., 0., 0., 1., 1., 1., 1., 1., 1., 0., 1., 1., 1., 0., 1., 0.,
+       0., 1., 0., 1., 0., 1., 0., 1., 0., 1., 1., 1., 0., 1., 0., 0., 1.,
+       0., 0., 1., 0., 1., 0., 1., 1., 1., 1., 0., 1., 1., 1., 1., 0., 1.,
+       0., 1., 1., 0., 0., 1., 0., 0., 0., 0., 0., 1., 1., 1., 1., 1., 1.,
+       1., 1., 0., 1., 1., 1., 0., 1., 1., 1., 1., 0., 1., 1., 1., 1., 0.,
+       0., 0., 1., 1., 0., 1., 0., 1., 1., 0., 1., 0., 1., 0., 1., 1., 1.,
+       0., 0., 1., 1., 0., 0., 0., 0., 0., 1., 1., 0., 1., 1., 1., 1., 1.,
+       1., 0., 0., 1., 0., 1., 1., 0., 0., 1., 1., 1., 0., 0., 0., 0., 0.,
+       0., 0., 1., 1., 1., 1., 1., 1., 0., 0., 0., 1., 0., 1., 1., 0., 0.,
+       1., 0., 1., 1., 1., 1., 1., 1., 1., 0., 1., 0., 0., 0., 0., 1., 1.,
+       0., 1., 0., 1., 1., 1., 1., 1., 1., 1., 0., 0., 1., 0., 1., 0., 0.,
+       0., 0., 0., 1., 0., 1., 0., 1., 1., 1., 1., 0., 1., 0., 0., 0., 0.,
+       1., 1., 1., 0., 1., 0., 1., 1., 1., 0.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">test_label</span><span class="p">,</span> <span class="n">probas</span><span class="p">)</span>
+<span class="n">cm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[65, 50],
+       [34, 82]])
 </pre></div>
 </div>
 </div>
@@ -2357,7 +2389,101 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.645021645021645
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6363636363636364
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="bagging-classifier">
+<h2>BAGGING CLASSIFIER<a class="headerlink" href="#bagging-classifier" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">GaussianNB</span><span class="p">(),</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">training</span><span class="p">,</span> <span class="n">training_label</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">training_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">training</span><span class="p">)</span>
+<span class="n">training_label_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">training_label</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">35</span><span class="o">-</span><span class="n">e5c9d921e9ef</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">training_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">training</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">training_label_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">training_label</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_bagging.py</span> in <span class="ni">predict</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">742</span>             <span class="n">The</span> <span class="n">predicted</span> <span class="n">classes</span><span class="o">.</span>
+<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">744</span><span class="s2">         predicted_probabilitiy = self.predict_proba(X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">745</span><span class="s2">         return self.classes_.take((np.argmax(predicted_probabilitiy, axis=1)), axis=0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">746</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_bagging.py</span> in <span class="ni">predict_proba</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">774</span><span class="s2">             dtype=None,</span>
+<span class="g g-Whitespace">    </span><span class="mi">775</span><span class="s2">             force_all_finite=False,</span>
+<span class="ne">--&gt; </span><span class="mi">776</span><span class="s2">             reset=False,</span>
+<span class="g g-Whitespace">    </span><span class="mi">777</span><span class="s2">         )</span>
+<span class="g g-Whitespace">    </span><span class="mi">778</span><span class="s2"> </span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/base.py</span> in <span class="ni">_validate_data</span><span class="nt">(self, X, y, reset, validate_separately, **check_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span><span class="s2">             raise ValueError(&quot;Validation should be done on X, y or both.&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">565</span><span class="s2">         elif not no_val_X and no_val_y:</span>
+<span class="ne">--&gt; </span><span class="mi">566</span><span class="s2">             X = check_array(X, **check_params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span><span class="s2">             out = X</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span><span class="s2">         elif no_val_X and not no_val_y:</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">check_array</span><span class="nt">(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator)</span>
+<span class="g g-Whitespace">    </span><span class="mi">771</span><span class="s2">                     &quot;Reshape your data either using array.reshape(-1, 1) if &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">772</span><span class="s2">                     &quot;your data has a single feature or array.reshape(1, -1) &quot;</span>
+<span class="ne">--&gt; </span><span class="mi">773</span><span class="s2">                     &quot;if it contains a single sample.&quot;.format(array)</span>
+<span class="g g-Whitespace">    </span><span class="mi">774</span><span class="s2">                 )</span>
+<span class="g g-Whitespace">    </span><span class="mi">775</span><span class="s2"> </span>
+
+<span class="ne">ValueError</span>: Expected 2D array, got 1D array instead:
+<span class="s2">array=[0 0 1 0 1 1 1 0 1 1 0 0 1 1 0 0 1 0 0 1 0 1 1 0 1 1 0 1 0 1 0 1 1 0 1 0 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 1 0 1 1 1 0 1 0 1 1 0 1 1 0 1 0 1 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 0 0 0 1 1 0 1 1 1 0 1 1 1 1 0 1 1 0 1 0 1 0 0 1 1 1 1 0 1 0 1 0 1 1 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 1 0 0 0 1 0 1 1 1 0 1 0 0 1 1 1 1 0 1 1 1 1 0 1 0 0 1 1 0 0 0 1 0 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 1 0 0 0 1 1 1 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 1 1 0 1 1 1 0 1 0 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 0 1 1 1 1 0 0 0 0 1 1 0 1 0 0 1 1 1 1 0 0 1 0 0 1 1 1 0 0 1 0 0 0 0 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 1 1 0 1 1 0 1 0 0 1 0 1 0 1 1 1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 1 1 1 0 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 0 1 0 0 0 0 0 1 1 1 0 0 0 1 1 1 1 1 1 0 1 1 0 0 0 1 1 1 1 1 0 0 1 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 0 1 1 1 0 1 0 0 1 0 0 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 0 0 0 0 0 0 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 0 0 1 0 1 1 1 1 1 0 1 1 0 0 0 1 0 1 0 1 1 0 0 0 0 1 1 1 0 1 0 1 1 1 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 0 0 1 0 0 0 0 1 1 0 0 1 1 0 1 0 1 1 0 1 0 1 1 1 1 1 1 0 0 1 1 1 0 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 1 1 0 1 0 1 1 1 0 1 0 1 1 1 0 1 1 0 0 0 1 1 1 1 0 0 1 1 0 1 1 0 0 1 1 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 0 1 1 1 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 1 1 1 1 1 1 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 0 1 1 1 0 0 1 0 0 0 1 1 0 1 1 1 1 0 1 1 0 0 1 1 1 1 1 0 1 0 1 0 0 1 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 1 1 0 1 0 1 1 1 1 0 0 1 0 1 0 1 0 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1 1 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 0 0 0 1 1 1 0 1 0 0 1 1 0 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 1 0 1 1 1 0 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 1 1 1 1 1 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 1 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 1 0 1 0 0 0 1 0 1 0 0 0 0 0 1 1 0 1 1 1 1 1 1 0 0 1 0 1 0 1 0 1 1 0 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 1 1 1 0 0 1 1 0 0 1 1 1 0 1 1 1 0 1 1 0 1 1 0 1 0 0 0 1 1 0 1 1 0 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 0 1 1 1 0 1 0 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1 1 1 1 1 0 1 1 0 0 0 1 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 0 1 1 1 0 0 0 1 0 1 0 1 1 1 1 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 1 1 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 0 0 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 0</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 1 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 0 1 1 0 0 1 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">0</span><span class="s2"> 0 0 1 1 1 1 1 1 1 0 0 1 1 1 0 0 1 1 0 1 0 0 0 0 0 1 1 1 1 1 0 0 1 0 1 1</span>
+<span class="g g-Whitespace"> </span><span class="mi">1</span><span class="s2"> 1 0 0 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 0 0 1 0 1 1 1 0 1 0 1 0].</span>
+<span class="s2">Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.</span>
 </pre></div>
 </div>
 </div>
@@ -2392,17 +2518,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Tugas-4.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Tugas-5.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">TUGAS 4 K-MEANS CLUSTERING</p>
+            <p class="prev-next-title">Tugas 5</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Tugas-6.html" title="next page">
+    <a class='right-next' id="next-link" href="Tugas-7.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas 6</p>
+        <p class="prev-next-title">TUGAS 7</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
